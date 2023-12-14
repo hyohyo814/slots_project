@@ -1,0 +1,50 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/avr-gcc",
+      "-Os",
+      "-Wall",
+      "-DF_CPU=16000000UL",
+      "-mmcu=atmega2560",
+      "-c",
+      "-o",
+      "steppers.o",
+      "steppers.c"
+    ],
+    "directory": "/home/sorjaisam/Desktop/Code/arduino/slots_stepper",
+    "file": "/home/sorjaisam/Desktop/Code/arduino/slots_stepper/steppers.c",
+    "output": "/home/sorjaisam/Desktop/Code/arduino/slots_stepper/steppers.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/avr-gcc",
+      "-Os",
+      "-Wall",
+      "-DF_CPU=16000000UL",
+      "-mmcu=atmega2560",
+      "-c",
+      "-o",
+      "segments.o",
+      "segments.c"
+    ],
+    "directory": "/home/sorjaisam/Desktop/Code/arduino/slots_stepper",
+    "file": "/home/sorjaisam/Desktop/Code/arduino/slots_stepper/segments.c",
+    "output": "/home/sorjaisam/Desktop/Code/arduino/slots_stepper/segments.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/avr-gcc",
+      "-Os",
+      "-Wall",
+      "-DF_CPU=16000000UL",
+      "-mmcu=atmega2560",
+      "-c",
+      "-o",
+      "main.o",
+      "main.c"
+    ],
+    "directory": "/home/sorjaisam/Desktop/Code/arduino/slots_stepper",
+    "file": "/home/sorjaisam/Desktop/Code/arduino/slots_stepper/main.c",
+    "output": "/home/sorjaisam/Desktop/Code/arduino/slots_stepper/main.o"
+  }
+]

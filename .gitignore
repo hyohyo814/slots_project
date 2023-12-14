@@ -1,0 +1,8 @@
+a.out
+a.hex
+main.hex
+segments.o
+steppers.o
+main.ino
+.cache/
+
