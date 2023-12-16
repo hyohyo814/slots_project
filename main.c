@@ -1,28 +1,9 @@
-/*
- * ATmega328p Timer output and pin outputs (current configuration)
- * OC0A - Arduino 6 - pin 12 - PD6 - STEP_3
- * OC0B - Arduino 5 - pin 11 - PD5
- * OC1A - Arduino 9 - pin 15 - PB1
- * OC1B - Arduino 10 - pin 16 - PB2
- * OC2A - Arduino 11 - pin 17 - PB3
- * OC2B - Arduino 3 - pin 5 - PD3
- *
- * BL - MA2
- * R - MA1
- * GR - MB2
- * WH - MB1
- */
-
 #include <avr/interrupt.h>
 #include <avr/io.h>
 #include <util/delay.h>
 
 #include "segments.h"
 #include "steppers.h"
-
-// uncomment to remove err
-// #include <avr/iom2560.h>
-
 
 int main() {
   OUT_DIR = 0xff;
