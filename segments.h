@@ -39,6 +39,10 @@
 #define DIG_7 PL6 // D43
 #define DIG_8 PL7 // D42
 
+#define BET_DIG 2
+#define WIN_DIG 3
+#define CREDITS_DIG 3
+
 // These are BCD values. i.e limited to 0-9.
 char bet[2];          // DIG_0, DIG_1
 char win[3];          // DIG_2, DIG_3, DIG_4
@@ -57,5 +61,9 @@ char displayBuff[8];
 
 void update_display();
 void load_user_display();
+void initialize_display_values();
+void set_bet(unsigned int[BET_DIG]);
+void set_win(unsigned int[WIN_DIG]);
+void set_credits(unsigned int[CREDITS_DIG]);
 
 #endif // !__SEGMENTS_H__

@@ -31,24 +31,20 @@ int main() {
 
   DDRF &= ~(1 << DDF0) & ~(1 << DDF1) &~(1 << DDF2);
 
-  bet[0] = 5;
-  bet[1] = 0;
-  win[0] = 1;
-  win[1] = 5;
-  credits[0] = 9;
-  credits[1] = 9;
-  credits[2] = 9;
+  // test reels on startup
+  step_test();
 
+  // initialize digits to bet: 00, win: 000, credits: 000 on startup
+  initialize_display_values();
   load_user_display();
   /*
    * Insert code to calibrate initial position of reel
    */
 
+
   while (1) {
-
-
     update_display();
 
-    step();
+    step_all();
   }
 }

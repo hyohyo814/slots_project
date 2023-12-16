@@ -8,8 +8,9 @@
 #define STEP3 PORTB6
 
 void step_test();
-void step();
-void continuous_test();
-void continuous_run();
+void step_all();
+void step1(unsigned int);
+void step2(unsigned int);
+void step3(unsigned int);
 
 #endif // !__STEPPERS_H__

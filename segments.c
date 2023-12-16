@@ -103,3 +103,33 @@ void load_user_display() {
   displayBuff[6] = credits[1];
   displayBuff[7] = credits[2];
 }
+
+void initialize_display_values() {
+  bet[0] = 0;
+  bet[1] = 0;
+  win[0] = 0;
+  win[1] = 0;
+  win[2] = 0;
+  credits[0] = 0;
+  credits[1] = 0;
+  credits[2] = 0;
+}
+
+void set_bet(unsigned int *bet_arr) {
+  for(unsigned int i = 0; i < BET_DIG; i++) {
+    bet[i] = bet_arr[i]; 
+  }
+}
+
+void set_win(unsigned int *win_arr) {
+  for(unsigned int i = 0; i < WIN_DIG; i++) {
+    win[i] = win_arr[i];
+  }
+}
+
+void set_credits(unsigned int *credits_arr) {
+  for(unsigned int i = 0; i < CREDITS_DIG; i++) {
+    credits[i] = credits_arr[i];
+  }
+}
+
