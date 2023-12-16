@@ -40,6 +40,22 @@
       "-mmcu=atmega2560",
       "-c",
       "-o",
+      "millis.o",
+      "millis.c"
+    ],
+    "directory": "/home/sorjaisam/Desktop/Code/arduino/slots_stepper",
+    "file": "/home/sorjaisam/Desktop/Code/arduino/slots_stepper/millis.c",
+    "output": "/home/sorjaisam/Desktop/Code/arduino/slots_stepper/millis.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/avr-gcc",
+      "-Os",
+      "-Wall",
+      "-DF_CPU=16000000UL",
+      "-mmcu=atmega2560",
+      "-c",
+      "-o",
       "main.o",
       "main.c"
     ],

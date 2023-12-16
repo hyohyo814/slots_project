@@ -7,3 +7,4 @@ steppers.o
 main.ino
 .cache/
 
+MegaDemoSm.ino

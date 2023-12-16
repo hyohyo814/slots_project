@@ -9,8 +9,5 @@
 
 void step_test();
 void step_all();
-void step1(unsigned int);
-void step2(unsigned int);
-void step3(unsigned int);
 
 #endif // !__STEPPERS_H__
