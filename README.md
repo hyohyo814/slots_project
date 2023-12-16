@@ -9,4 +9,4 @@ The program can be compiled simply with the default set in the Makefile with any
 or simply with ```make```
 
 # Future plans
-*Will be added in the future
+- A single file that can be copied into the Arduino IDE for users without a linux system
