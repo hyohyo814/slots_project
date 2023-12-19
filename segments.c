@@ -114,7 +114,6 @@ void serviceDazzle() {
 // segments: dpgfedcba
 // NOTE: This could be tuned tighter by using micros().
 void dazzleDisplay() {
-  char val;
   char segPattern;
   static char digit = DIG_1; // physical display digit
   static char index = 0;     // vertual display digit
@@ -140,7 +139,6 @@ void serviceDisplay() {
   static char digit = DIG_1; // physical display digit
   static char index = 0;     // vertual display digit
   static unsigned long lastCheck = 0;
-  static char flag = 0;
 
   if (lastCheck < millis()) {
     lastCheck += 1; // 2 ms timing

@@ -26,24 +26,6 @@ int main() {
 
   DDRF &= ~(1 << DDF0) & ~(1 << DDF1) & ~(1 << DDF2);
 
-  // Fast PWM with OCRnA Top
-  /*
-  TCCR1A = (1 << COM1A0) | (1 << COM1B1) | (1 << WGM21) | (1 << WGM20);
-  TCCR1B = (1 << WGM22) | (1 << CS22);
-  */
-
-  /*
-  TCCR1A = (1 << COM1A0) | (1 << COM1B1) | (1 << WGM20);
-  TCCR1B = (1 << WGM22) | (1 << CS22);
-  */
-
-  /*
-  TCCR2A = (1 << COM2A0) | (1 << COM2B1) | (1 << WGM21) | (1 << WGM20);
-  TCCR2B = (1 << WGM22) | (1 << CS22);
-  */
-
-  // test reels on startup
-
   // initialize digits to bet: 00, win: 000, credits: 000 on startup
   initialize_display_values();
   load_user_display();
@@ -52,9 +34,6 @@ int main() {
    */
 
   init_millis(16000000UL);
-
-  // initialize prev_time
-  unsigned long prev_time = millis();
 
   /*
   OCR2A = 50;
@@ -74,11 +53,12 @@ int main() {
   win[2] = 0x03;
 
   gameState = GS_SPIN;
-  unsigned char flag = 0;
+  /* Parameters for controlling stepper speed
   unsigned char speed = 4;
   unsigned long speedTime = 0;
   unsigned int count = 0;
   unsigned long countTime = 1000;
+  */
 
   while (1) {
     static unsigned long lastTime = 1000;
@@ -104,16 +84,10 @@ int main() {
 
     case GS_SPIN:
       serviceDisplay();
-      dazzleDisplay();
       if (lastTime < millis()) {
+        // 4 ms
         lastTime += 4;
-        if (flag == 0) {
-          flag = 1;
-          PORTB &= ~(1 << PORTB4);
-        } else {
-          flag = 0;
-          PORTB |= (1 << PORTB4);
-        }
+        step1();
       }
       break;
 

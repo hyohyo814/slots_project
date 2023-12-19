@@ -3,31 +3,32 @@
 
 #include "steppers.h"
 
-void step_test() {
-  for (unsigned int i = 0; i < 200; i++) {
-    OUT_PORT &= ~(1 << STEP1);
-    _delay_us(10);
-    OUT_PORT |= (1 << STEP1);
-    _delay_us(8000);
-  }
-  for (unsigned int i = 0; i < 200; i++) {
-    OUT_PORT &= ~(1 << STEP2);
-    _delay_us(10);
-    OUT_PORT |= (1 << STEP2);
-    _delay_us(8000);
-  }
-  for (unsigned int i = 0; i < 200; i++) {
-    OUT_PORT &= ~(1 << STEP3);
-    _delay_us(10);
-    OUT_PORT |= (1 << STEP3);
-    _delay_us(8000);
+void step1() {
+  if (flag == 0) {
+    flag = 1;
+    PORTB &= ~(1 << PORTB4);
+  } else {
+    flag = 0;
+    PORTB |= (1 << PORTB4);
   }
 }
 
-void step_all() {
-  OUT_PORT &= ~(1 << STEP1) & ~(1 << STEP2) & ~(1 << STEP3);
-  _delay_us(10);
-  OUT_PORT |= (1 << STEP1) | (1 << STEP2) | (1 << STEP3);
-  _delay_us(10);
+void step2() {
+  if (flag == 0) {
+    flag = 1;
+    PORTB &= ~(1 << PORTB5);
+  } else {
+    flag = 0;
+    PORTB |= (1 << PORTB5);
+  }
 }
 
+void step3() {
+  if (flag == 0) {
+    flag = 1;
+    PORTB &= ~(1 << PORTB6);
+  } else {
+    flag = 0;
+    PORTB |= (1 << PORTB6);
+  }
+}

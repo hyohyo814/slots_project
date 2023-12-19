@@ -11,9 +11,9 @@
       "steppers.o",
       "steppers.c"
     ],
-    "directory": "/home/sorjaisam/Desktop/Code/arduino/slots_stepper",
-    "file": "/home/sorjaisam/Desktop/Code/arduino/slots_stepper/steppers.c",
-    "output": "/home/sorjaisam/Desktop/Code/arduino/slots_stepper/steppers.o"
+    "directory": "/home/hyohyo814/cstuff/slots_project",
+    "file": "/home/hyohyo814/cstuff/slots_project/steppers.c",
+    "output": "/home/hyohyo814/cstuff/slots_project/steppers.o"
   },
   {
     "arguments": [
@@ -27,9 +27,9 @@
       "segments.o",
       "segments.c"
     ],
-    "directory": "/home/sorjaisam/Desktop/Code/arduino/slots_stepper",
-    "file": "/home/sorjaisam/Desktop/Code/arduino/slots_stepper/segments.c",
-    "output": "/home/sorjaisam/Desktop/Code/arduino/slots_stepper/segments.o"
+    "directory": "/home/hyohyo814/cstuff/slots_project",
+    "file": "/home/hyohyo814/cstuff/slots_project/segments.c",
+    "output": "/home/hyohyo814/cstuff/slots_project/segments.o"
   },
   {
     "arguments": [
@@ -43,9 +43,9 @@
       "millis.o",
       "millis.c"
     ],
-    "directory": "/home/sorjaisam/Desktop/Code/arduino/slots_stepper",
-    "file": "/home/sorjaisam/Desktop/Code/arduino/slots_stepper/millis.c",
-    "output": "/home/sorjaisam/Desktop/Code/arduino/slots_stepper/millis.o"
+    "directory": "/home/hyohyo814/cstuff/slots_project",
+    "file": "/home/hyohyo814/cstuff/slots_project/millis.c",
+    "output": "/home/hyohyo814/cstuff/slots_project/millis.o"
   },
   {
     "arguments": [
@@ -59,8 +59,8 @@
       "main.o",
       "main.c"
     ],
-    "directory": "/home/sorjaisam/Desktop/Code/arduino/slots_stepper",
-    "file": "/home/sorjaisam/Desktop/Code/arduino/slots_stepper/main.c",
-    "output": "/home/sorjaisam/Desktop/Code/arduino/slots_stepper/main.o"
+    "directory": "/home/hyohyo814/cstuff/slots_project",
+    "file": "/home/hyohyo814/cstuff/slots_project/main.c",
+    "output": "/home/hyohyo814/cstuff/slots_project/main.o"
   }
 ]

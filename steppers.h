@@ -7,7 +7,10 @@
 #define STEP2 PORTB5
 #define STEP3 PORTB6
 
-void step_test();
-void step_all();
+unsigned char flag;
+
+void step1();
+void step2();
+void step3();
 
 #endif // !__STEPPERS_H__
