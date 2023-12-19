@@ -38,8 +38,8 @@
 #include <avr/pgmspace.h>
 #include <util/delay.h>
 
-#include "segments.h"
 #include "millis.h"
+#include "segments.h"
 
 void loadUserDisplay();
 void updateDisplay();
@@ -97,13 +97,14 @@ void update_display() {
   }
 }
 
-// This generates a random segment display to replace the standard User Bet,Win,Credits display.
+// This generates a random segment display to replace the standard User
+// Bet,Win,Credits display.
 void serviceDazzle() {
   static unsigned long dazzleCheck = 0;
 
-  if( dazzleCheck < millis() ) {
-    dazzleCheck += 100;                     // new random patterns.
-    for(int i=0; i<8; ++i) {
+  if (dazzleCheck < millis()) {
+    dazzleCheck += 100; // new random patterns.
+    for (int i = 0; i < 8; ++i) {
       displayBuff[i] = (char)random(256);
     }
   }
@@ -115,18 +116,19 @@ void serviceDazzle() {
 void dazzleDisplay() {
   char val;
   char segPattern;
-  static char digit = DIG_1;                            // physical display digit
-  static char index = 0;                                // vertual display digit
+  static char digit = DIG_1; // physical display digit
+  static char index = 0;     // vertual display digit
   static unsigned long lastCheck = 0;
 
-  if( lastCheck < millis() ) {
-    lastCheck += 1;                                     // 2 ms timing
+  if (lastCheck < millis()) {
+    lastCheck += 1; // 2 ms timing
     PORTL &= ~_BV(digit);
-    segPattern = displayBuff[index];                    // get segment pattern
+    segPattern = displayBuff[index]; // get segment pattern
     PORTA = segPattern;
-    digit = pgm_read_word_near(digTable + index);       // get digit pin
+    digit = pgm_read_word_near(digTable + index); // get digit pin
     PORTL |= _BV(digit);
-    if(++index == 8) index = 0;                         // set up for next digit
+    if (++index == 8)
+      index = 0; // set up for next digit
   }
 }
 
@@ -135,19 +137,22 @@ void dazzleDisplay() {
 void serviceDisplay() {
   char val;
   char segPattern;
-  static char digit = DIG_1;                            // physical display digit
-  static char index = 0;                                // vertual display digit
+  static char digit = DIG_1; // physical display digit
+  static char index = 0;     // vertual display digit
   static unsigned long lastCheck = 0;
+  static char flag = 0;
 
-  if( lastCheck < millis() ) {
-    lastCheck += 1;               // 2 ms timing
+  if (lastCheck < millis()) {
+    lastCheck += 1; // 2 ms timing
     PORTL &= ~_BV(digit);
     val = displayBuff[index];
-    segPattern = pgm_read_word_near(segTable + val);    // get segment pattern
+    segPattern = pgm_read_word_near(segTable + val); // get segment pattern
     PORTA = segPattern;
-    digit = pgm_read_word_near(digTable + index);       // get digit pin
+    digit = pgm_read_word_near(digTable + index); // get digit pin
     PORTL |= _BV(digit);
-    if(++index == 8) index = 0;                         // set up for next digit
+    if (++index == 8) {
+      index = 0; // set up for next digit
+    }
   }
 }
 
@@ -173,4 +178,3 @@ void initialize_display_values() {
   credits[1] = 0;
   credits[2] = 0;
 }
-
