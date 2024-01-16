@@ -1,13 +1,3 @@
-/*
- * set PWM output on D10-D12
- *
- * OC2A - PORTB4 - D10
- * OC1A - PORTB5 - D11
- * OC1B - PORTB6 - D12
- *
- *
- */
-
 enum GAME_STATE gameState;
 
 #include <avr/interrupt.h>
